@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-export type FromFieldProps = {
+export type InputFieldProps = {
   label: string;
   inputProps: DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
@@ -8,7 +8,7 @@ export type FromFieldProps = {
   >;
 };
 
-const FromField = ({ label, inputProps }: FromFieldProps) => {
+const FromInputField = ({ label, inputProps }: InputFieldProps) => {
   //make fields optional and filter the fields for undefined ones
   return (
     <label className="block">
@@ -18,4 +18,14 @@ const FromField = ({ label, inputProps }: FromFieldProps) => {
   );
 };
 
-export default FromField;
+/*
+name: string;
+  className: string;
+  id: string;
+  type: string;
+  placeholder: string;
+  "aria-label": string;
+  autocomplete: string;
+*/
+
+export default FromInputField;
