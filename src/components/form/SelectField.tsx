@@ -3,7 +3,7 @@ export type SelectFieldProps = {
   options: string[];
   multiple?: boolean;
 };
-const FormSelectField = ({ label, options, multiple }: SelectFieldProps) => {
+const SelectField = ({ label, options, multiple }: SelectFieldProps) => {
   return (
     <label className="block">
       <span className="text-gray-700">{label}</span>
@@ -16,4 +16,4 @@ const FormSelectField = ({ label, options, multiple }: SelectFieldProps) => {
   );
 };
 
-export default FormSelectField;
+export default SelectField;

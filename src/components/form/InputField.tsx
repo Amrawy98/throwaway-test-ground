@@ -8,8 +8,7 @@ export type InputFieldProps = {
   >;
 };
 
-const FromInputField = ({ label, inputProps }: InputFieldProps) => {
-  //make fields optional and filter the fields for undefined ones
+const InputField = ({ label, inputProps }: InputFieldProps) => {
   return (
     <label className="block">
       <span className="text-gray-700">{label}</span>
@@ -28,4 +27,4 @@ name: string;
   autocomplete: string;
 */
 
-export default FromInputField;
+export default InputField;
