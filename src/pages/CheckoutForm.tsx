@@ -98,22 +98,23 @@ const CheckoutForm = () => {
   const textareaArray: TextareaProps[] = [
     { defaultValue: "", label: "Address", placeholder: "address" },
   ];
+
   return (
     <form action="">
       <div className="px-6 text-gray-900 antialiased">
         <div className="mx-auto max-w-xl py-12 md:max-w-4xl">
           <div className="mt-8 grid grid-cols-1 items-start gap-6 md:grid-cols-2">
-            {inputFieldArray.map((inputField) => (
-              <InputField {...inputField} />
+            {inputFieldArray.map((inputField, index) => (
+              <InputField key={`inputField${index}`} {...inputField} />
             ))}
-            {selectFieldArray.map((selectField) => (
-              <SelectField {...selectField} />
+            {selectFieldArray.map((selectField, index) => (
+              <SelectField key={`selectField${index}`} {...selectField} />
             ))}
-            {fieldsetArray.map((fieldset) => (
-              <Fieldset {...fieldset} />
+            {fieldsetArray.map((fieldset, index) => (
+              <Fieldset key={`fieldset${index}`} {...fieldset} />
             ))}
-            {textareaArray.map((textarea) => (
-              <Textarea {...textarea} />
+            {textareaArray.map((textarea, index) => (
+              <Textarea key={`textarea${index}`} {...textarea} />
             ))}
           </div>
         </div>

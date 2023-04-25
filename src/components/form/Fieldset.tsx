@@ -10,7 +10,7 @@ const Fieldset = ({ legend, options, type }: FieldsetProps) => {
       <legend className="text-gray-700">{legend}</legend>
       <div className="mt-2">
         {options.map((option, index) => (
-          <div>
+          <div key={`fieldsetOption${index}`}>
             <label className="inline-flex items-center">
               <input
                 className={type === "checkbox" ? "form-checkbox" : "form-radio"}
